@@ -1,7 +1,15 @@
+
+
+
 import static org.mockito.Mockito.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
+public interface FileWriter {
+    void write(String content);
+}
 public class FileServiceTest {
 
     @Test
