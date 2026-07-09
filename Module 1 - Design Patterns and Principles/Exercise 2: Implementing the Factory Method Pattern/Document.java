@@ -1,24 +1,25 @@
 public interface Document {
     void open();
+
+    
+}
+ class WordDocument implements Document {
+    public void open(){
+        System.out.println("openning Word Document");
+
+    }
+
+    
 }
 
-public class WordDocument implements Document {
-    @Override
-    public void open() {
-        System.out.println("Opening Word Document...");
+ class PdfDocument implements Document{
+    public void open(){
+        System.out.println("Openning PDF Document");
     }
 }
 
-public class PdfDocument implements Document {
-    @Override
-    public void open() {
-        System.out.println("Opening PDF Document...");
-    }
-}
-
-public class ExcelDocument implements Document {
-    @Override
-    public void open() {
-        System.out.println("Opening Excel Document...");
+class ExcelDocument implements Document{
+    public void open(){
+        System.out.println("Openning Excel Document");
     }
 }

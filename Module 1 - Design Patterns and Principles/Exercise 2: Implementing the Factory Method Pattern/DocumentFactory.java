@@ -1,24 +1,24 @@
 public abstract class DocumentFactory {
-    public abstract Document createDocument();
+    public abstract Document create();
 }
 
-public class WordDocumentFactory extends DocumentFactory {
-    @Override
-    public Document createDocument() {
+class WordDocumentfact extends DocumentFactory{
+    public Document create(){
         return new WordDocument();
     }
 }
-
-public class PdfDocument implements Document {
-    @Override
-    public void open() {
-        System.out.println("Opening PDF Document...");
+ class PdfDocumentFact extends DocumentFactory {
+    public Document create(){
+        return new PdfDocument();
     }
+
+    
 }
 
-public class ExcelDocument implements Document {
-    @Override
-    public void open() {
-        System.out.println("Opening Excel Document...");
+class ExcelDocumentfact extends DocumentFactory {
+    public Document create(){
+        return new ExcelDocument();
     }
+
+    
 }
