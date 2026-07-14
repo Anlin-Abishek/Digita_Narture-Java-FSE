@@ -13,26 +13,26 @@ import java.util.Date;
 @SpringBootApplication
 public class SpringLearnApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SpringLearnApplication.class);
 
     public static void main(String[] args) {
-        LOGGER.info("START");
+        LOG.info("START");
         SpringApplication.run(SpringLearnApplication.class, args);
         SpringLearnApplication app = new SpringLearnApplication();
         app.displayDate();
-        LOGGER.info("END");
+        LOG.info("END");
     }
 
     public void displayDate() {
-        LOGGER.info("START");
+        LOG.info("START");
         ApplicationContext context = new ClassPathXmlApplicationContext("date-format.xml");
         SimpleDateFormat format = context.getBean("dateFormat", SimpleDateFormat.class);
         try {
             Date date = format.parse("31/12/2018");
-            LOGGER.debug("Parsed Date: {}", date);
+            LOG.debug("Parsed Date: {}", date);
         } catch (ParseException e) {
-            LOGGER.error("Error parsing date: {}", e.getMessage());
+            LOG.error("Error parsing date: {}", e.getMessage());
         }
-        LOGGER.info("END");
+        LOG.info("END");
     }
 }
