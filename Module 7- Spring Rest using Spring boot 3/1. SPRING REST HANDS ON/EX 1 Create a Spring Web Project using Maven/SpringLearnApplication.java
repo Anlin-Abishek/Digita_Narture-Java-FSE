@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringLearnApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SpringLearnApplication.class);
 
     public static void main(String[] args) {
-        LOGGER.info("START");
+        LOG.info("START");
         SpringApplication.run(SpringLearnApplication.class, args);
-        LOGGER.info("END");
+        LOG.info("END");
     }
 }
